@@ -1,0 +1,14 @@
+{
+  "name": "virtual-pet",
+  "version": "1.0.0",
+  "description": "MCR Codes Week 7 - OOP Basics",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Joanne Basa",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
