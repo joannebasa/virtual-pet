@@ -10,6 +10,7 @@ function Pet(name) {
 
 Pet.prototype.growUp = function() {
   this.age +=1;
+  this.hunger +=5;
 }
 
 // const pet = {
@@ -26,6 +27,6 @@ const rex = new Pet('Rex');
 module.exports = Pet;
 
 //Pet hunger starts at 0 - done
-//growUp() should increase hunger property by 5
+//growUp() should increase hunger property by 5 - done
 //Pet should have initial fitness of 10
 //growUp() method should decrease fitness property by 3
