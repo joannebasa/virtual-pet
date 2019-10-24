@@ -16,6 +16,13 @@ describe('constructor', () => {
 
       expect(pet.age).toEqual(0);
     });
+
+    it('Pet must have an initial hunger level of 0', () => {
+      const pet = new Pet('Fido');
+
+      expect(pet.hunger).toEqual(0);
+
+    });
   });
 
   describe('growUp', () => {
@@ -26,4 +33,6 @@ describe('constructor', () => {
       
       expect(pet.age).toEqual(1);
     });
+
+
   });
