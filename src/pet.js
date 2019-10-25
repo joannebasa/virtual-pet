@@ -12,6 +12,7 @@ function Pet(name) {
 Pet.prototype.growUp = function() {
   this.age +=1;
   this.hunger +=5;
+  this.fitness -=3;
 }
 
 // const pet = {

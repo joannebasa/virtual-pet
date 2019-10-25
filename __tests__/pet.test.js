@@ -51,4 +51,13 @@ describe('constructor', () => {
       expect(pet.hunger).toEqual(5);
 
     });
+
+    it('should decrease fitness level by 3', () => {
+
+      const pet = new Pet('Fido');
+
+      pet.growUp();
+
+      expect(pet.fitness).toEqual(7);
+    });
   });
