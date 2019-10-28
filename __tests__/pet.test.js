@@ -33,7 +33,7 @@ describe('constructor', () => {
 
 });
 
-  describe('growUp', () => {
+describe('growUp', () => {
     it('increments the age by 1', () => {
       const pet = new Pet('Fido');
 
@@ -60,4 +60,16 @@ describe('constructor', () => {
 
       expect(pet.fitness).toEqual(7);
     });
+});
+
+describe('walk', () => {
+  
+  it('walk() should increase fitness level by 10', () => {
+    const pet = new Pet('Fido');
+
+    pet.fitness = 4;
+    pet.walk();
+
+    expect (pet.fitness).toEqual(8);
   });
+});
