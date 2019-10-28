@@ -74,12 +74,22 @@ describe('walk', () => {
   });
 
   it('fitness level cannot go higher than 10', () => {
-        const pet = new Pet('Fido');
+    const pet = new Pet('Fido');
     
-        pet.fitness = 7;
-        pet.walk();
+    pet.fitness = 7;
+    pet.walk();
         
-        expect(pet.fitness).toEqual(10);
+    expect(pet.fitness).toEqual(10);
   });
+});
     
+describe('feed', () => {
+  it('feed() should decrease hunger level by 3', () => {
+    const pet = new Pet('Fido');
+  
+    pet.hunger = 4;
+    pet.feed();
+  
+    expect (pet.hunger).toEqual(1);
+  });  
 });
