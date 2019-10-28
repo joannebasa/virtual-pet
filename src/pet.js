@@ -16,7 +16,14 @@ Pet.prototype.growUp = function() {
 };
 
 Pet.prototype.walk = function() {
-  this.fitness +=4;
+  //this.fitness +=4; //needs max level at 10
+
+if ((this.fitness + 4) <= 10 ) {
+      this.fitness += 4;
+    } else {
+      this.fitness = 10;
+    }
+  
 };
 
 const fido = new Pet('Fido');

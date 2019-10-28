@@ -72,4 +72,14 @@ describe('walk', () => {
 
     expect (pet.fitness).toEqual(8);
   });
+
+  it('fitness level cannot go higher than 10', () => {
+        const pet = new Pet('Fido');
+    
+        pet.fitness = 7;
+        pet.walk();
+        
+        expect(pet.fitness).toEqual(10);
+  });
+    
 });
