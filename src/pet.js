@@ -35,7 +35,7 @@ Pet.prototype.feed = function() {
 
 Pet.prototype.checkUp = function() {
 
-  if (this.fitness >=3 && this.hunger <=5){
+  if (this.fitness >3 && this.hunger <5){
     return "I feel great";
   }
 
