@@ -25,7 +25,12 @@ Pet.prototype.walk = function() {
 };
 
 Pet.prototype.feed = function() {
-  this.hunger -=3;
+ // this.hunger -=3;
+  if ((this.hunger  - 3) >= 0 ) {
+        this.hunger -= 3;
+      } else {
+        this.hunger = 0;
+      }
 };
 
 const fido = new Pet('Fido');
@@ -35,6 +40,6 @@ module.exports = Pet;
 
 /* To do:
   - give Pet a feed() method - done
-  - calling feed() should decrease hunger level by 3
-  - hunger level should not go below 0
+  - calling feed() should decrease hunger level by 3 - done
+  - hunger level should not go below 0 - done
 */

@@ -92,4 +92,13 @@ describe('feed', () => {
   
     expect (pet.hunger).toEqual(1);
   });  
+
+  it('hunger level cannot go lower than 0', () => {
+    const pet = new Pet('Fido');
+  
+    pet.hunger = 2;
+    pet.feed();
+  
+    expect (pet.hunger).toEqual(0);
+  });  
 });
