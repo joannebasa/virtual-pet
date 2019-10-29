@@ -33,13 +33,35 @@ Pet.prototype.feed = function() {
       }
 };
 
+Pet.prototype.checkUp = function() {
+
+  if (this.fitness >=3 && this.hunger <=5){
+    return "I feel great";
+  }
+
+  if (this.fitness <=3 && this.hunger >=5){
+    return "I am hungry and I need a walk";
+  }
+
+  if (this.fitness <=3) {
+    return "I need a walk";
+  }
+
+  if (this.hunger >=5) {
+    return "I am hungry";
+  }
+
+};
+
 const fido = new Pet('Fido');
 const rex = new Pet('Rex');
 
 module.exports = Pet;
 
 /* To do:
-  - give Pet a feed() method - done
-  - calling feed() should decrease hunger level by 3 - done
-  - hunger level should not go below 0 - done
+  - checkUp() method - 
+  - if fitness <=3  - "I need a walk",- done
+  if hunger >=5 - "I am hungry", - done
+  if BOTH ARE TRUE - "I am hungry and I need a walk", - done
+  if neither are true - "I feel great" - done
 */
